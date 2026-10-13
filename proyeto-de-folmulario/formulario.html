@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="formulario.html">formulario</a></li>
+            
+        </ul>
+    </nav>
+    <h1>Solicitud de empleo</h1>
+<section>
+      <form action="https://httpbin.org/post" method="post">
+        <p>
+          <label for="nombre">Nombre</label>
+          <input type="text" placeholder="Indica tu nombre" name="nombre" id="nombre" />
+        </p>
+        <p>
+          <label for="apellido">Apellido</label>
+          <input type="text" placeholder="Indica tu apellido" name="apellido" id="apellido" />
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="email" placeholder="Indica tu email" name="email" required id="email" />
+        </p>
+
+        <p>
+          <label for="phone">Teléfono (formato 000-000-0000):</label>
+          <input
+            type="text" placeholder="numero de telefono"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            title="Debe usar el formato 000-000-0000"
+            required
+          />
+        </p>
+
+        <p>
+          <label for="cédula">Cédula</label>
+          <input
+            type="text" placeholder="cedula"
+            id="cedula"
+            name="cedula"
+            pattern="[0-9]{3}-[0-9]{7}-[0-9]{1}"
+            title="Debe usar el formato 000-0000000-0"
+            required
+          />
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Indica tu password"
+            minlength="8"
+            id="password"
+          />
+        </p>
+
+        <p>
+          <label for="gender">Género</label>
+          <input type="radio" name="gender" value="hombre" checked />Hombre
+          <input type="radio" name="gender" value="mujer" />Mujer
+        </p>
+
+        <p>
+          <label for="hobbies">Hobbies</label>
+          <input type="checkbox" name="hobbie1" value="programar" checked />Programar
+          <input type="checkbox" name="hobbie2" value="leer" />Leer
+          <input type="checkbox" name="hobbie3" value="descansar" />Descansar
+        </p>
+        <p>
+          <label for="trabajo">Astrabajado antes</label>
+          <input type="radio" name="trabajo" value="si" checked />si
+          <input type="radio" name="trabajo" value="no" />no
+        </p>
+
+        <p>
+          <label for="donde">en donde</label>
+          <textarea name="donde" id="comentarios"></textarea>
+        </p>
+        <p>
+          <label for="nacionalidad">Nacionalidad</label>
+          <select name="nacionalidad" id="nacionalidad">
+            <option value="" selected>Ninguna</option>
+            <option value="dom">Dominicana</option>
+            <option value="ven">Venezolana</option>
+            <option value="usa">Estadounidense</option>
+            <option value="pr">Puertoriqueña</option>
+          </select>
+        </p>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar campos</button>
+      </form>
+    </section>
+    
+</body>
+</html>
